@@ -1,0 +1,81 @@
+//cmd /k cd "C:\Users\n.vasilyev.11isip232\Desktop\windowapp" && windres resource.rc -O coff resource.res
+#include <windows.h>
+
+My_Icon ICON "jonkler.ico"
+My_Cursor CURSOR "cursor1.cur"
+
+My_Menu MENU
+{
+	POPUP "&Файл" {
+		MENUITEM "&Открыть... \tCtlr-O", 2
+		MENUITEM "&Сохранить", 3
+		MENUITEM "&Сохранить как...", 4
+		MENUITEM SEPARATOR
+		MENUITEM "&Hex view", 5, CHECKED GRAYED
+		MENUITEM "&Выйти из приложения", 6
+	}
+	POPUP "&Редактировать" {
+		MENUITEM "&Копировать", 7
+		MENUITEM "&Вставить", 8
+		POPUP "У Вас выпало" {
+			MENUITEM "1", 9
+			MENUITEM "2", 10
+			MENUITEM "3", 11
+		}
+		MENUITEM SEPARATOR
+		MENUITEM "Поиск", 12
+	}
+	POPUP "&Помощь" {
+		MENUITEM "&О приложении... \tF1", 13
+	}
+}
+AboutApp DIALOG 10, 10, 300, 90
+STYLE DS_MODALFRAME
+CAPTION "О приложении"
+{
+	CTEXT "Супер мега веселое приложения для игры с крутыми кнопками, развлекатесь)))", 1, 10, 20, 280, 12 
+	CTEXT "Создатели: Васильева Нина, Обыденных Алена", 3, 10, 37, 280, 12
+	CTEXT "Версия: 0.1    Дата выхода: 27.03.2025", 4, 10, 54, 280, 12
+	PUSHBUTTON "Закрыть", 2, 122, 74, 35, 12
+}
+FellDlg1 DIALOG 10, 10, 100, 100
+STYLE WS_BORDER
+CAPTION "Выпало 1"
+{
+	CTEXT "У вас выпала нога", 1, 25, 10, 50, 20
+	PUSHBUTTON "Понял(а)", 2, 35, 60, 30, 12
+}
+FellDlg2 DIALOG 10, 10, 100, 100
+STYLE WS_BORDER
+CAPTION "Выпало 2"
+{
+	CTEXT "У вас выпала рука", 1, 25, 10, 50, 20
+	PUSHBUTTON "СПС БЛИН", 2, 30, 60, 42, 12
+}
+FellDlg3 DIALOG 10, 10, 100, 100
+STYLE WS_BORDER
+CAPTION "Выпало 3"
+{
+	CTEXT "У вас выпала почка", 1, 25, 10, 50, 20
+	PUSHBUTTON "о даа", 2, 35, 60, 30, 12
+}
+Copy DIALOG 10, 10, 100, 100
+STYLE WS_BORDER
+CAPTION "Копирование"
+{
+	CTEXT "Успешное копирование текста", 1, 25, 10, 50, 30
+	PUSHBUTTON "ОК", 2, 35, 60, 30, 12
+}
+Paste DIALOG 10, 10, 100, 100
+STYLE WS_BORDER
+CAPTION "Вставить"
+{
+	CTEXT "Успешная вставка текста", 1, 25, 10, 50, 20
+	PUSHBUTTON "ОК", 2, 35, 60, 30, 12
+}
+proba DIALOG 10, 10, 100, 100
+STYLE WS_BORDER
+CAPTION "Вставить"
+{
+	CTEXT "Успешная вставка текста", 1, 25, 10, 50, 20
+	PUSHBUTTON "ОК", 2, 35, 60, 30, 12

@@ -1,0 +1,1 @@
+LRESULT CALLBACK MainWinProc(HWND hw, UINT msg, WPARAM wp, LPARAM lp);
